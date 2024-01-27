@@ -9,6 +9,7 @@ public class WolfMovement : MonoBehaviour
     private Transform target;
     Animator animator;
     SpriteRenderer spriteRenderer;
+    public AudioManager wolfKillsSheepSound;
 
     // Start is called before the first frame update
     void Start()
@@ -70,6 +71,7 @@ public class WolfMovement : MonoBehaviour
             target = null;
             animator.Play("Attack");
             StartCoroutine(KillSheep());
+            wolfKillsSheepSound.PlaySound("event:/WolfKillsSheep");
         }
     }
 

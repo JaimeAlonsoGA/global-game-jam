@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40fcb02ff7200b49b5f98f6f6cf1c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorSound: {fileID: 1130280554}
 --- !u!4 &44484578
 Transform:
   m_ObjectHideFlags: 0
@@ -1086,7 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc788b030766ad48b953bb529fe5c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sheepDelivery: {fileID: 1130280554}
+  sheepSafeSound: {fileID: 0}
 --- !u!212 &939817959
 SpriteRenderer:
   m_ObjectHideFlags: 0

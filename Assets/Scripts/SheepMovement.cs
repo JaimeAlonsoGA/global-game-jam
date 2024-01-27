@@ -24,8 +24,8 @@ public class SheepMovement : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {
-        spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
+    {   
+        spriteRenderer.sortingOrder = 100 - Mathf.RoundToInt(transform.position.y);
         currentTimeToNextAction += Time.deltaTime;
         if (currentTimeToNextAction >= timeToNextAction)
         {

@@ -6,6 +6,8 @@ public class SafeArea : MonoBehaviour
 {
     int numberSheep = 0;
 
+    public AudioManager sheepDelivery;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class SafeArea : MonoBehaviour
     {
         if(col.gameObject.CompareTag("Sheep"))
             numberSheep++;
-
+        sheepDelivery.PlaySound("event:/SheepDelivery");
         print(numberSheep);
     }
 }

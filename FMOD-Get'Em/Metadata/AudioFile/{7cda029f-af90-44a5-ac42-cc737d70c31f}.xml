@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7cda029f-af90-44a5-ac42-cc737d70c31f}">
+		<property name="assetPath">
+			<value>Pastor/pastor2-02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.625</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{83e485c8-a64a-4336-a4e4-155548aebdc1}</destination>
+		</relationship>
+	</object>
+</objects>

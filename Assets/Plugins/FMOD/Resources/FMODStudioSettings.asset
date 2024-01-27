@@ -475,8 +475,14 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master
+  Banks:
+  - Ambience
+  - Animals
+  - SFX
+  - Shepherd
+  - Soundtrack
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

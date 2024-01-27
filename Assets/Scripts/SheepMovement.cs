@@ -14,7 +14,6 @@ public class SheepMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeToNextAction = Random.Range(5f, 10f);
     }
 
     // Update is called once per frame

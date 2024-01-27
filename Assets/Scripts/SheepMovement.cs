@@ -10,15 +10,20 @@ public class SheepMovement : MonoBehaviour
     Vector3 nextPosition;
     Vector3 scapePosition;
     float speed = 0.05f;
+    Animator animator;
+    SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {   
+        spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
         currentTimeToNextAction += Time.deltaTime;
         if(currentTimeToNextAction >= timeToNextAction)
         {
@@ -38,6 +43,32 @@ public class SheepMovement : MonoBehaviour
         }
         if(scapePosition != Vector3.zero)
             nextPosition = scapePosition;
+
+        if(transform.position == nextPosition)
+            animator.Play("Idle");
+        else
+        {
+            Vector3 direction = Vector3.Normalize(nextPosition - transform.position);
+            
+            if(direction.x > 0.5f)
+            {
+                animator.Play("WalkSide");
+                spriteRenderer.flipX = false;
+            }
+            else if(direction.x < -0.5f)
+            {
+                animator.Play("WalkSide");
+                spriteRenderer.flipX = true;
+            }
+            else if(direction.y > 0.5f)
+            {
+                animator.Play("WalkUp");
+            }
+            else if(direction.y < -0.5f)
+            {
+                animator.Play("WalkDown");
+            }
+        }
 
         GetComponent<Rigidbody2D>().MovePosition(Vector3.MoveTowards(transform.position, nextPosition, speed));
     }

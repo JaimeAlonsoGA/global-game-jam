@@ -67,6 +67,7 @@ public class WolfMovement : MonoBehaviour
         if (collision.gameObject.tag == "Sheep")
         {
             Destroy(collision.gameObject);
+            target = null;
             animator.Play("Attack");
             StartCoroutine(KillSheep());
         }

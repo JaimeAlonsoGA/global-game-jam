@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ShepherdMovement : MonoBehaviour
 {
+    public GameObject shepherd1;
+    public GameObject shepherd2;
+
     public Sprite walkUp1;
     public Sprite walkUp2;
     public Sprite walkDown1;
@@ -36,7 +39,7 @@ public class ShepherdMovement : MonoBehaviour
         //Movement for controller
         if (gameObject.CompareTag("Shepherd"))
         {
-            if (y > 0 || Input.GetKey(KeyCode.W))
+            if (Vector3.Distance() (y > 0 || Input.GetKey(KeyCode.W))
             {
                 gameObject.transform.position += new Vector3(0, 2.5f, 0) * Time.deltaTime;
                 // gameObject.GetComponent<SpriteRenderer>().sprite = walkUp1;

@@ -31,14 +31,14 @@ public class SheepMovement : MonoBehaviour
         scapePosition = Vector3.zero;
         if(Vector3.Distance(shepherds[0].transform.position, transform.position) < 3f)
         {
-            scapePosition += transform.position - shepherds[0].transform.position;
+            scapePosition += transform.position + Vector3.Normalize(transform.position - shepherds[0].transform.position);
         }
         if(Vector3.Distance(shepherds[1].transform.position, transform.position) < 3f)
         {
-            scapePosition += transform.position - shepherds[1].transform.position;
+            scapePosition += transform.position + Vector3.Normalize(transform.position - shepherds[1].transform.position);
         }
         if(scapePosition != Vector3.zero)
-            nextPosition = Vector3.Normalize(scapePosition) * 10f;
+            nextPosition = scapePosition;
 
         GetComponent<Rigidbody2D>().MovePosition(Vector3.MoveTowards(transform.position, nextPosition, speed));
     }

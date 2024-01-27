@@ -7,6 +7,35 @@ public class WolfMovement : MonoBehaviour
     public List<GameObject> sheep = new();
     public float wolfSpeed;
     private Transform target;
+    Animator animator;
+    SpriteRenderer spriteRenderer;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(animator.GetCurrentAnimatorClipInfo(0).Length > 0 && animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == "Attack")
+            return;
+
+        SearchSheep();
+    }
+
+    void SearchSheep()
+    {
+        target = FindTarget();
+        if (target != null)
+        {
+            Vector3 direction = Vector3.Normalize(target.position - transform.position);
+            GetComponent<Rigidbody2D>().MovePosition(transform.position + direction * wolfSpeed * Time.deltaTime);
+            PlayMoveAnimation(direction);
+        }
+    }
 
     public Transform FindTarget()
     {
@@ -38,33 +67,37 @@ public class WolfMovement : MonoBehaviour
         if (collision.gameObject.tag == "Sheep")
         {
             Destroy(collision.gameObject);
-            target = FindTarget();
+            StartCoroutine(KillSheep());
         }
     }
 
-
-    // Start is called before the first frame update
-    void Start()
+    IEnumerator KillSheep()
     {
-        // sheep = GameObject.FindGameObjectsWithTag("Sheep");
-
+        animator.Play("Attack");
+        yield return new WaitForSeconds(2);
+        SearchSheep();
     }
 
-    // Update is called once per frame
-    void Update()
+    void PlayMoveAnimation(Vector3 direction)
     {
-        target = FindTarget();
-        if (target != null)
+        if(direction.x > 0.5f)
         {
-            Vector3 direction = (target.position - transform.position).normalized;
-            GetComponent<Rigidbody2D>().MovePosition(transform.position + direction * wolfSpeed * Time.deltaTime);
+            animator.Play("WalkSide");
+            spriteRenderer.flipX = false;
         }
-
-
-
-        // transform.position = (Vector3.Distance(transform.position, sheep[0].transform.position) > 1) ? Vector3.MoveTowards(transform.position, sheep.transform.position, wolfSpeed * Time.deltaTime) : transform.position;
-        // Vector3 direction = Sheep.transform.position - transform.position;
-
+        else if(direction.x < -0.5f)
+        {
+            animator.Play("WalkSide");
+            spriteRenderer.flipX = true;
+        }
+        else if(direction.y > 0.5f)
+        {
+            animator.Play("WalkUp");
+        }
+        else if(direction.y < -0.5f)
+        {
+            animator.Play("WalkDown");
+        }
     }
 }
 

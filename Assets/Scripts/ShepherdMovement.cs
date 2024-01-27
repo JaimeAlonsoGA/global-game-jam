@@ -39,24 +39,24 @@ public class ShepherdMovement : MonoBehaviour
             if (y > 0 || Input.GetKey(KeyCode.W))
             {
                 gameObject.transform.position += new Vector3(0, 2.5f, 0) * Time.deltaTime;
-                gameObject.GetComponent<SpriteRenderer>().sprite = walkUp1;
+                // gameObject.GetComponent<SpriteRenderer>().sprite = walkUp1;
             }
             if (x > 0 || Input.GetKey(KeyCode.D))
             {
                 gameObject.transform.position += new Vector3(2.5f, 0, 0) * Time.deltaTime;
-                gameObject.GetComponent<SpriteRenderer>().sprite = walkSide1;
-                gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                // gameObject.GetComponent<SpriteRenderer>().sprite = walkSide1;
+                // gameObject.GetComponent<SpriteRenderer>().flipX = false;
             }
             if (x < 0 || Input.GetKey(KeyCode.A))
             {
                 gameObject.transform.position += new Vector3(-2.5f, 0, 0) * Time.deltaTime;
-                gameObject.GetComponent<SpriteRenderer>().sprite = walkSide1;
-                gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                // gameObject.GetComponent<SpriteRenderer>().sprite = walkSide1;
+                // gameObject.GetComponent<SpriteRenderer>().flipX = true;
             }
             if (y < 0 || Input.GetKey(KeyCode.S))
             {
                 gameObject.transform.position += new Vector3(0, -2.5f, 0) * Time.deltaTime;
-                gameObject.GetComponent<SpriteRenderer>().sprite = walkDown1;
+                // gameObject.GetComponent<SpriteRenderer>().sprite = walkDown1;
             }
         }
         else if (gameObject.CompareTag("Shepherd2"))

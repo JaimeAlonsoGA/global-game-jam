@@ -15,6 +15,6 @@ public class CameraPositionSize : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.Lerp(new Vector3(Shepherd1.position.x, Shepherd1.position.y, -30) , new Vector3(Shepherd2.position.x, Shepherd2.position.y, -30), 0.5f);
+        transform.position = Vector3.Lerp(new Vector3(Shepherd1.position.x, Shepherd1.position.y, -12) , new Vector3(Shepherd2.position.x, Shepherd2.position.y, -12), 0.5f);
     }
 }

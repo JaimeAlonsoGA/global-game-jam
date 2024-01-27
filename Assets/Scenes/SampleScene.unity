@@ -152,7 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40fcb02ff7200b49b5f98f6f6cf1c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelPassedScreen: {fileID: 0}
+  levelNotPassedScreen: {fileID: 0}
   doorSound: {fileID: 1130280554}
+  safeArea: {fileID: 0}
 --- !u!4 &44484578
 Transform:
   m_ObjectHideFlags: 0
@@ -269,6 +272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044adcdfb7f2182459c469b863d974c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shepherd1: {fileID: 149515598}
+  shepherd2: {fileID: 1583056846}
   walkUp1: {fileID: 21300000, guid: 956131a48b5ae344282021dfb47b598f, type: 3}
   walkUp2: {fileID: 21300000, guid: 4cb33da75e047bb4aae3b62e249ff971, type: 3}
   walkDown1: {fileID: 21300000, guid: a0d3f9ed17b05324785407f129529070, type: 3}
@@ -1088,6 +1093,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc788b030766ad48b953bb529fe5c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalSheep: 0
+  numberSheepInside: 0
   sheepSafeSound: {fileID: 1130280554}
 --- !u!212 &939817959
 SpriteRenderer:
@@ -1943,7 +1950,6 @@ GameObject:
   - component: {fileID: 1573177333}
   - component: {fileID: 1573177336}
   - component: {fileID: 1573177337}
-  - component: {fileID: 1573177338}
   m_Layer: 7
   m_Name: Sheep
   m_TagString: Sheep
@@ -2116,18 +2122,6 @@ CircleCollider2D:
   m_Offset: {x: -0.09, y: -0.54}
   serializedVersion: 2
   m_Radius: 1.06
---- !u!114 &1573177338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573177330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 867d9fb993178e74eafc4cef36568382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1583056846
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,6 +2154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044adcdfb7f2182459c469b863d974c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shepherd1: {fileID: 149515598}
+  shepherd2: {fileID: 1583056846}
   walkUp1: {fileID: 0}
   walkUp2: {fileID: 0}
   walkDown1: {fileID: 0}

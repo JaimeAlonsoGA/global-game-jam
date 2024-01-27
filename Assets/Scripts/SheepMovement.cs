@@ -9,7 +9,7 @@ public class SheepMovement : MonoBehaviour
     float currentTimeToNextAction;
     Vector3 nextPosition;
     Vector3 scapePosition;
-    float speed = 5f;
+    float speed = 0.05f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class SheepMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {   
         currentTimeToNextAction += Time.deltaTime;
         if(currentTimeToNextAction >= timeToNextAction)
@@ -31,15 +31,23 @@ public class SheepMovement : MonoBehaviour
         scapePosition = Vector3.zero;
         if(Vector3.Distance(shepherds[0].transform.position, transform.position) < 3f)
         {
-            scapePosition += Vector3.Normalize(transform.position - shepherds[0].transform.position) * 10f;
+            scapePosition += transform.position - shepherds[0].transform.position;
         }
         if(Vector3.Distance(shepherds[1].transform.position, transform.position) < 3f)
         {
-            scapePosition += Vector3.Normalize(transform.position - shepherds[1].transform.position) * 10f;
+            scapePosition += transform.position - shepherds[1].transform.position;
         }
         if(scapePosition != Vector3.zero)
-            nextPosition = scapePosition;
+            nextPosition = Vector3.Normalize(scapePosition) * 10f;
 
-        GetComponent<Rigidbody2D>().MovePosition(Vector3.MoveTowards(transform.position, nextPosition, Time.deltaTime * speed));
+        GetComponent<Rigidbody2D>().MovePosition(Vector3.MoveTowards(transform.position, nextPosition, speed));
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.CompareTag("Sheep"))
+        {
+            nextPosition = transform.position;
+        }
     }
 }

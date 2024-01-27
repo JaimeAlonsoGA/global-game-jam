@@ -42,31 +42,31 @@ public class ShepherdMovement : MonoBehaviour
         {
             if ((Mathf.Abs(shepherd2.transform.position.y - shepherd1.transform.position.y) < 20f || shepherd1.transform.position.y < shepherd2.transform.position.y) && (y > 0 || Input.GetKey(KeyCode.W)))
             {
-                gameObject.transform.position += new Vector3(0, 2.5f, 0) * Time.deltaTime;
+                gameObject.transform.position += new Vector3(0, 4f, 0) * Time.deltaTime;
             }
             if ((Mathf.Abs(shepherd2.transform.position.x - shepherd1.transform.position.x) < 35f || shepherd1.transform.position.x < shepherd2.transform.position.x) && (x > 0 || Input.GetKey(KeyCode.D)))
             {
-                gameObject.transform.position += new Vector3(2.5f, 0, 0) * Time.deltaTime;
+                gameObject.transform.position += new Vector3(4f, 0, 0) * Time.deltaTime;
             }
             if ((Mathf.Abs(shepherd2.transform.position.x - shepherd1.transform.position.x) < 35f  || shepherd1.transform.position.x > shepherd2.transform.position.x) && (x < 0 || Input.GetKey(KeyCode.A)))
             {
-                gameObject.transform.position += new Vector3(-2.5f, 0, 0) * Time.deltaTime;
+                gameObject.transform.position += new Vector3(-4f, 0, 0) * Time.deltaTime;
             }
             if ((Mathf.Abs(shepherd2.transform.position.y - shepherd1.transform.position.y) < 20f  || shepherd1.transform.position.y > shepherd2.transform.position.y) && (y < 0 || Input.GetKey(KeyCode.S)))
             {
-                gameObject.transform.position += new Vector3(0, -2.5f, 0) * Time.deltaTime;
+                gameObject.transform.position += new Vector3(0, -4f, 0) * Time.deltaTime;
             }
         }
         else if (gameObject.CompareTag("Shepherd2"))
         {
             if ((Mathf.Abs(shepherd1.transform.position.y - shepherd2.transform.position.y) < 20f || shepherd2.transform.position.y < shepherd1.transform.position.y) && (yTwo > 0 || Input.GetKey(KeyCode.UpArrow)))
-                gameObject.transform.position += new Vector3(0, 2.5f, 0) * Time.deltaTime;
+                gameObject.transform.position += new Vector3(0, 4f, 0) * Time.deltaTime;
             if ((Mathf.Abs(shepherd1.transform.position.x - shepherd2.transform.position.x) < 35f || shepherd2.transform.position.x < shepherd1.transform.position.x) && (xTwo > 0 || Input.GetKey(KeyCode.RightArrow)))
-                gameObject.transform.position += new Vector3(2.5f, 0, 0) * Time.deltaTime;
+                gameObject.transform.position += new Vector3(4f, 0, 0) * Time.deltaTime;
             if ((Mathf.Abs(shepherd1.transform.position.x - shepherd2.transform.position.x) < 35f || shepherd2.transform.position.x > shepherd1.transform.position.x) && (xTwo < 0 || Input.GetKey(KeyCode.LeftArrow)))
-                gameObject.transform.position += new Vector3(-2.5f, 0, 0) * Time.deltaTime;
+                gameObject.transform.position += new Vector3(-4f, 0, 0) * Time.deltaTime;
             if ((Mathf.Abs(shepherd1.transform.position.y - shepherd2.transform.position.y) < 20f || shepherd2.transform.position.y > shepherd1.transform.position.y) && (yTwo < 0 || Input.GetKey(KeyCode.DownArrow)))
-                gameObject.transform.position += new Vector3(0, -2.5f, 0) * Time.deltaTime;
+                gameObject.transform.position += new Vector3(0, -4f, 0) * Time.deltaTime;
         }
     }
 }

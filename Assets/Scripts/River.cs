@@ -16,11 +16,11 @@ public class River : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        if(collider.gameObject.CompareTag("Sheep"))
+        if(col.gameObject.CompareTag("Sheep"))
         {
-            Destroy(collider.gameObject);
+            Destroy(col.gameObject);
         }
     }
 }

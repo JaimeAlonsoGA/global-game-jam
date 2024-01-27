@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class SafeArea : MonoBehaviour
 {
-    int numberSheep = 0;
+    public int totalSheep = 0;
+    public int numberSheepInside = 0;
 
     public AudioManager sheepSafeSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        totalSheep = GameObject.FindGameObjectsWithTag("Sheep").Length;
     }
 
     // Update is called once per frame
@@ -23,8 +24,13 @@ public class SafeArea : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.CompareTag("Sheep"))
-            numberSheep++;
+            numberSheepInside++;
         sheepSafeSound.PlaySound("event:/SheepDelivery");
-        print(numberSheep);
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if(col.gameObject.CompareTag("Sheep"))
+            numberSheepInside--;
     }
 }

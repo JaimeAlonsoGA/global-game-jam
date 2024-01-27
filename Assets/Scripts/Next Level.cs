@@ -17,7 +17,14 @@ public class NextLevel : MonoBehaviour
 
     public void Salir()
     {
-        Debug.Log("Salir...");
         Application.Quit();
     }
+
+    void OnEnable()
+    {
+        Debug.Log("PrintOnEnable: script was enabled");
+        // StartCoroutine()
+    }
+
+
 }

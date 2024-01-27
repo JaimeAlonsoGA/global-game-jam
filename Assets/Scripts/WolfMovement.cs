@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WolfMovement : MonoBehaviour
 {
-    public GameObject[] sheep = new GameObject[2];
+    public List<GameObject> sheep = new();
     public float wolfSpeed;
     private Transform target;
 
@@ -15,7 +15,10 @@ public class WolfMovement : MonoBehaviour
         Transform closest;
         float distance;
 
-        closest = sheep[0].transform;
+        if(sheep.Length > 0)
+            closest = sheep[0].transform;
+        else
+            return transform;
 
         for (int i = 0; i < sheep.Length; ++i)
         {
@@ -30,22 +33,11 @@ public class WolfMovement : MonoBehaviour
         return closest;
     }
 
-    // private void OnCollisionEnter(Collision collision)
-    // {
-    //     if (collision.collider.CompareTag("Sheep"))
-    //     {
-    //         collision.collider.gameObject.tag = "Untagged"; // Remove the tag so that FindTarget won't return it
-    //         Destroy(collision.collider.gameObject);
-            
-    //     }
-    // }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Sheep")
         {
             Destroy(collision.gameObject);
-            collision.collider.gameObject.tag = "Untagged";
             target = FindTarget();
         }
     }

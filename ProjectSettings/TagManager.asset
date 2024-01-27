@@ -6,15 +6,16 @@ TagManager:
   tags:
   - Shepherd
   - Shepherd2
+  - Sheep
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Shepherds
   - Water
   - UI
-  - 
-  - 
+  - Wolfs
+  - Sheep
   - 
   - 
   - 

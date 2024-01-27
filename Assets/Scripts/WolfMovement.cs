@@ -30,13 +30,32 @@ public class WolfMovement : MonoBehaviour
         return closest;
     }
 
+    // private void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.collider.CompareTag("Sheep"))
+    //     {
+    //         collision.collider.gameObject.tag = "Untagged"; // Remove the tag so that FindTarget won't return it
+    //         Destroy(collision.collider.gameObject);
+            
+    //     }
+    // }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Sheep")
+        {
+            Destroy(collision.gameObject);
+            collision.collider.gameObject.tag = "Untagged";
+            target = FindTarget();
+        }
+    }
 
 
     // Start is called before the first frame update
     void Start()
     {
         // sheep = GameObject.FindGameObjectsWithTag("Sheep");
-        
+
     }
 
     // Update is called once per frame
@@ -48,6 +67,8 @@ public class WolfMovement : MonoBehaviour
             Vector3 direction = (target.position - transform.position).normalized;
             GetComponent<Rigidbody2D>().MovePosition(transform.position + direction * wolfSpeed * Time.deltaTime);
         }
+
+
 
         // transform.position = (Vector3.Distance(transform.position, sheep[0].transform.position) > 1) ? Vector3.MoveTowards(transform.position, sheep.transform.position, wolfSpeed * Time.deltaTime) : transform.position;
         // Vector3 direction = Sheep.transform.position - transform.position;

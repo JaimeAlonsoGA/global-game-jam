@@ -30,12 +30,22 @@ public class WolfMovement : MonoBehaviour
         return closest;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    // private void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.collider.CompareTag("Sheep"))
+    //     {
+    //         collision.collider.gameObject.tag = "Untagged"; // Remove the tag so that FindTarget won't return it
+    //         Destroy(collision.collider.gameObject);
+            
+    //     }
+    // }
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Sheep"))
+        if (collision.gameObject.tag == "Sheep")
         {
-            collision.collider.gameObject.tag = "Untagged"; // Remove the tag so that FindTarget won't return it
-            Destroy(collision.collider.gameObject);
+            Destroy(collision.gameObject);
+            collision.collider.gameObject.tag = "Untagged";
             target = FindTarget();
         }
     }

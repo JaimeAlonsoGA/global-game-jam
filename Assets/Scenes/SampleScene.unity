@@ -396,7 +396,7 @@ MonoBehaviour:
   sheep:
   - {fileID: 1573177330}
   - {fileID: 1974717621}
-  wolfSpeed: 5
+  wolfSpeed: 8
 --- !u!50 &269465478
 Rigidbody2D:
   serializedVersion: 4

@@ -9,10 +9,10 @@ public class AudioManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot(path, GetComponent<Transform>().position);
     }
-
+    
     void Start()
     {
-        // PlaySound("event:/SountrakNoWolf");
+        
     }
 
     void Update()

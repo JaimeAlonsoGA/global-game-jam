@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc788b030766ad48b953bb529fe5c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sheepSafeSound: {fileID: 0}
+  sheepSafeSound: {fileID: 1130280554}
 --- !u!212 &939817959
 SpriteRenderer:
   m_ObjectHideFlags: 0

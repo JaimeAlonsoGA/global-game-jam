@@ -1096,7 +1096,7 @@ GameObject:
   - component: {fileID: 939817960}
   - component: {fileID: 939817959}
   - component: {fileID: 939817958}
-  - component: {fileID: 939817961}
+  - component: {fileID: 939817962}
   m_Layer: 0
   m_Name: Safe Area
   m_TagString: Untagged
@@ -1177,14 +1177,14 @@ Transform:
   m_GameObject: {fileID: 939817957}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.48, y: 1.18, z: 0}
-  m_LocalScale: {x: 7.709992, y: 9.796612, z: 1.2444094}
+  m_LocalPosition: {x: 12.6, y: 1.1, z: 0}
+  m_LocalScale: {x: 7, y: 10.3, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &939817961
-BoxCollider2D:
+--- !u!60 &939817962
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1225,9 +1225,17 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.49929553, y: 0.5013674}
+      - {x: -0.49974507, y: 0.18563141}
+      - {x: -0.32109344, y: 0.18515013}
+      - {x: -0.32011443, y: -0.18370716}
+      - {x: -0.5066868, y: -0.18552552}
+      - {x: -0.50599045, y: -0.5018573}
+      - {x: 0.5053024, y: -0.50415087}
+      - {x: 0.50574565, y: 0.50221294}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1219493120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,7 +1665,7 @@ Transform:
   m_GameObject: {fileID: 1573177330}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 2.7, z: 0}
+  m_LocalPosition: {x: 9.38, y: 1.17, z: 0}
   m_LocalScale: {x: 0.93985695, y: 0.93985695, z: 0.93985695}
   m_ConstrainProportionsScale: 0
   m_Children: []

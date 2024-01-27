@@ -12,8 +12,8 @@ public class AudioManager : MonoBehaviour
     
     void Start()
     {
-        // PlaySound("event:/SoundtrackNoWolf");
-        // PlaySound("event:/ForestAmbience");
+        PlaySound("event:/SoundtrackNoWolf");
+        PlaySound("event:/ForestAmbience");
     }
 
     void Update()

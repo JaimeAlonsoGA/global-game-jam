@@ -22,8 +22,7 @@ public class ShepherdMovement : MonoBehaviour
                 gameObject.transform.position += new Vector3(-2.5f, 0f, 0) * Time.deltaTime;
             if (Input.GetKey(KeyCode.S))
                 gameObject.transform.position += new Vector3(0f, -2.5f, 0) * Time.deltaTime;
-        } 
-        
+        }
         else {
             if (Input.GetKey(KeyCode.UpArrow))
                 gameObject.transform.position += new Vector3(0f, 2.5f, 0) * Time.deltaTime;

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{cd573545-5c4a-4e61-a31e-3494d15d7a94}">
+		<property name="color">
+			<value>Yellow Light 1</value>
+		</property>
 		<property name="name">
-			<value>SountrakNoWolf</value>
+			<value>SoundtrackNoWolf</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

@@ -67,14 +67,14 @@ public class WolfMovement : MonoBehaviour
         if (collision.gameObject.tag == "Sheep")
         {
             Destroy(collision.gameObject);
+            animator.Play("Attack");
             StartCoroutine(KillSheep());
         }
     }
 
     IEnumerator KillSheep()
     {
-        animator.Play("Attack");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2f);
         SearchSheep();
     }
 

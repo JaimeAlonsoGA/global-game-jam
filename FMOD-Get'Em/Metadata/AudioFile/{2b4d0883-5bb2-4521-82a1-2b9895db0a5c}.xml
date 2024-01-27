@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2b4d0883-5bb2-4521-82a1-2b9895db0a5c}">
+		<property name="assetPath">
+			<value>SFX/ganar2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.63889583333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{83e485c8-a64a-4336-a4e4-155548aebdc1}</destination>
+		</relationship>
+	</object>
+</objects>

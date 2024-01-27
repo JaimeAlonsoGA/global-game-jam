@@ -461,7 +461,7 @@ MonoBehaviour:
   - {fileID: 1219493120}
   - {fileID: 1995392623}
   wolfSpeed: 5
-  wolfKillsSheepSound: {fileID: 1130280554}
+  wolfSound: {fileID: 1130280554}
 --- !u!50 &269465478
 Rigidbody2D:
   serializedVersion: 4

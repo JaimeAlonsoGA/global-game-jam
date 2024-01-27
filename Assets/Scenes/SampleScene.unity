@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 1583056848}
   - component: {fileID: 1583056847}
   m_Layer: 0
-  m_Name: Shepherd (1)
+  m_Name: Shepherd2
   m_TagString: Shepherd2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -843,3 +843,4 @@ SceneRoots:
   - {fileID: 1974717623}
   - {fileID: 149515600}
   - {fileID: 1583056849}
+  - {fileID: 269465476}

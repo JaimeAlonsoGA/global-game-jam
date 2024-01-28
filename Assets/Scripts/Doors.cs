@@ -5,13 +5,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Doors : MonoBehaviour
-{
+{   
     public GameObject levelPassedScreen;
     public GameObject levelNotPassedScreen;
-
     public AudioManager doorSound;
     public SafeArea safeArea;
-    bool doorClosed = false;
+    AudioManager audioInstance;
+    public bool doorClosed = false;
     
    // Start is called before the first frame update
     void Start()
@@ -42,6 +42,9 @@ public class Doors : MonoBehaviour
             }
             doorClosed = true;
             doorSound.PlaySound("event:/Door");
+            
+            audioInstance.sheepInstace.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            audioInstance.shepherdInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
 
         if(safeArea.totalSheep == 0)

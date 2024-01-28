@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class River : MonoBehaviour
+public class Cliff : MonoBehaviour
 {
-    public AudioManager sheepWaterSound;
+    public AudioManager sheepFallSound; 
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class River : MonoBehaviour
         if(col.gameObject.CompareTag("Sheep"))
         {
             Destroy(col.gameObject);
-            sheepWaterSound.PlaySound("event:/SheepWaterSplash");
+            sheepFallSound.PlaySound("event:/SheepFall");
         }
     }
 }

@@ -1268,6 +1268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 646496481}
   - component: {fileID: 646496480}
+  - component: {fileID: 646496482}
   m_Layer: 0
   m_Name: Rocas (1)
   m_TagString: Untagged
@@ -1342,6 +1343,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1510364874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.516}
+--- !u!68 &646496482
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646496479}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.44183177, y: -0.011899933}
+  - {x: -0.57662416, y: -0.14336263}
+  - {x: -0.43661267, y: -0.2881565}
+  - {x: 0.2021383, y: -0.15960597}
+  - {x: 0.30347168, y: -0.019072404}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &647817347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,7 +1586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7700778804377273559, guid: 91b464cc8f8cb0f47bf783c62a90cf52, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.04619788
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7700778804377273559, guid: 91b464cc8f8cb0f47bf783c62a90cf52, type: 3}
       propertyPath: m_LocalRotation.w

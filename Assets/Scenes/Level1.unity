@@ -554,7 +554,7 @@ MonoBehaviour:
   - {fileID: 1829350338}
   - {fileID: 165195731}
   - {fileID: 679116634}
-  - {fileID: 695316431}
+  - {fileID: 1829350338}
   - {fileID: 331112160}
   - {fileID: 1869751430}
   textsDialog:
@@ -1280,6 +1280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SafeArea: {fileID: 0}
+  text: {fileID: 0}
 --- !u!1 &744384969
 GameObject:
   m_ObjectHideFlags: 0

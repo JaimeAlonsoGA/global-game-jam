@@ -14,8 +14,7 @@ public class NextLevel : MonoBehaviour
 {
     public UnityEngine.UI.Image[] stars;
     public Sprite[] coloredStars;
-    [field: SerializeField] public EventReference[] StarSoundArray { get; private set; }
-    AudioManager starSound;
+    public AudioManager starSound;
 
     public void SiguienteNivel()
     {
@@ -49,17 +48,17 @@ public class NextLevel : MonoBehaviour
         for (int i = 0; i < nStars; ++i)
         {
             stars[i].sprite = coloredStars[i];
-            if (i == 1)
+            if (i == 0)
             {
                 starSound.PlaySound("event:/Win1Star");
             }
+            if (i == 1)
+            {
+                starSound.PlaySound("event:/Win2Star");
+            }
             if (i == 2)
             {
-                starSound.PlaySound("event:/Win2Stars");
-            }
-            if (i == 3)
-            {
-                starSound.PlaySound("event:/Win3Stars");
+                starSound.PlaySound("event:/Win3Star");
             }
             yield return new WaitForSeconds(1f);
         }

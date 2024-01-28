@@ -63,7 +63,7 @@ Transform:
   m_GameObject: {fileID: 5914439203721462390}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.32, y: 7.65, z: 0.15076603}
+  m_LocalPosition: {x: -11.12, y: 0.29, z: 0.15076603}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -153,18 +153,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.035265923, y: -2.734532}
+  m_Offset: {x: -0.0036507845, y: -0.57621783}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.133776, y: 5.846667}
+    oldSize: {x: 1.033444, y: 1.4616667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5633488, y: 1.1955924}
+  m_Size: {x: 0.53208375, y: 0.2585194}
   m_EdgeRadius: 0
 --- !u!50 &6276729739598447532
 Rigidbody2D:
@@ -207,6 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shepherd1: {fileID: 5914439203721462390}
   shepherd2: {fileID: 6961534420388143288}
+  doors: {fileID: 0}
 --- !u!95 &9168121249441149403
 Animator:
   serializedVersion: 5
@@ -258,7 +259,7 @@ Transform:
   m_GameObject: {fileID: 6961534420388143288}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18, y: -2.6, z: 0.15076603}
+  m_LocalPosition: {x: -10.78, y: -2.06, z: 0.15076603}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -330,6 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shepherd1: {fileID: 5914439203721462390}
   shepherd2: {fileID: 6961534420388143288}
+  doors: {fileID: 0}
 --- !u!61 &4563520785622670342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -362,18 +364,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.051885128, y: -2.7179117}
+  m_Offset: {x: 0.006265044, y: -0.58349323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.133776, y: 5.846667}
+    oldSize: {x: 1.033444, y: 1.4616667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2641973, y: 1.1623535}
+  m_Size: {x: 0.53823686, y: 0.21942377}
   m_EdgeRadius: 0
 --- !u!50 &8792859145921210365
 Rigidbody2D:

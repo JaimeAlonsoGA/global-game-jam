@@ -257,11 +257,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1637793841314767494, guid: 9009d19050db26947b842194cc4395fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25
+      value: 1.22
       objectReference: {fileID: 0}
     - target: {fileID: 1637793841314767494, guid: 9009d19050db26947b842194cc4395fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.67
+      value: -0.82
       objectReference: {fileID: 0}
     - target: {fileID: 2820545430177177782, guid: 9009d19050db26947b842194cc4395fa, type: 3}
       propertyPath: m_Radius
@@ -405,11 +405,11 @@ PrefabInstance:
       objectReference: {fileID: 530599873}
     - target: {fileID: 9170239180955058785, guid: 9009d19050db26947b842194cc4395fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.31
+      value: -4.282
       objectReference: {fileID: 0}
     - target: {fileID: 9170239180955058785, guid: 9009d19050db26947b842194cc4395fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.13
+      value: -4.614
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -451,7 +451,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 362768469}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &176919492
 EdgeCollider2D:
@@ -527,7 +527,7 @@ Transform:
   m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 362768469}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &287422185
 EdgeCollider2D:
@@ -2226,7 +2226,12 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.9168519, y: -2.1772332}
+  - {x: -1.3898641, y: -1.0489106}
+  - {x: -1.7414765, y: -1.8054852}
+  - {x: -1.7414765, y: -1.8054852}
+  - {x: -1.7709317, y: -1.868865}
+  - {x: -1.7709318, y: -1.8688651}
+  - {x: -1.9918611, y: -2.0911744}
   - {x: -2.0721636, y: -2.4053316}
   - {x: -5.9063606, y: -2.3984125}
   - {x: -6.272071, y: -1.995924}
@@ -2234,16 +2239,16 @@ EdgeCollider2D:
   - {x: -5.8822994, y: 2.3410275}
   - {x: -2.1874945, y: 2.3494382}
   - {x: -1.7863672, y: 1.8687958}
-  - {x: -1.6784133, y: 1.057428}
-  - {x: -1.9624771, y: 1.045291}
+  - {x: -1.7257708, y: 0.7653898}
+  - {x: -1.986156, y: 0.78482455}
   - {x: -2.3503103, y: 1.6304452}
   - {x: -5.6954613, y: 1.5996637}
   - {x: -6.006467, y: 1.2072343}
   - {x: -6.045523, y: -1.2763069}
   - {x: -5.835985, y: -1.7196279}
   - {x: -2.2534125, y: -1.6152358}
-  - {x: -1.86178, y: -1.173349}
-  - {x: -1.5506793, y: -1.1588498}
+  - {x: -1.8696729, y: -0.5655938}
+  - {x: -1.5901439, y: -0.55898774}
   - {x: -1.9114246, y: -2.190601}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
@@ -2428,7 +2433,7 @@ GameObject:
   - component: {fileID: 1262755687}
   - component: {fileID: 1262755686}
   - component: {fileID: 1262755685}
-  - component: {fileID: 1262755684}
+  - component: {fileID: 1262755688}
   m_Layer: 0
   m_Name: Safe Area
   m_TagString: Untagged
@@ -2564,13 +2569,58 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262755683}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.9999353, w: -0.011374054}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -3.919, y: 0.070022, z: 0}
   m_LocalScale: {x: 3.9602795, y: 3.2336755, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 181.303}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!61 &1262755688
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262755683}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.011340022, y: 0.020076454}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8809712, y: 0.8909321}
+  m_EdgeRadius: 0
 --- !u!1 &1334467931
 GameObject:
   m_ObjectHideFlags: 0
@@ -2885,10 +2935,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3429665470961361753, guid: 6858adeed0096fd4a90201bf761b19d1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1626903996}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6858adeed0096fd4a90201bf761b19d1, type: 3}
 --- !u!4 &1440761130 stripped
 Transform:
@@ -2989,22 +3036,10 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5355660130175998843, guid: 6858adeed0096fd4a90201bf761b19d1, type: 3}
   m_PrefabInstance: {fileID: 1363201099}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333720231}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d010f51ecd32f4c489682bbbbb5f2ae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1626903996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333720231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa339cb355202234ab623c48c99b89f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1650695261 stripped
@@ -3391,4 +3426,5 @@ SceneRoots:
   - {fileID: 929971276}
   - {fileID: 679938198}
   - {fileID: 1362318134}
-  - {fileID: 362768469}
+  - {fileID: 176919491}
+  - {fileID: 287422184}

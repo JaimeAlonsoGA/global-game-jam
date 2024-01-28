@@ -11,23 +11,25 @@ public class Doors : MonoBehaviour
 
     public AudioManager doorSound;
     public SafeArea safeArea;
+    bool doorClosed = false;
     
    // Start is called before the first frame update
     void Start()
     {
-
+        doorClosed = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && doorClosed == false)
         {
             GetComponentsInChildren<Animator>()[0].Play("Door");
             GetComponentsInChildren<Animator>()[1].Play("Door");
             if(safeArea.numberSheepInside / safeArea.totalSheep < 0.5f)
             {
                 levelNotPassedScreen.SetActive(true);
+
             }
             else
             {
@@ -39,6 +41,8 @@ public class Doors : MonoBehaviour
                     numberStars++;
                 StartCoroutine(levelPassedScreen.GetComponent<NextLevel>().StarCounting(numberStars, SceneManager.GetActiveScene().buildIndex));
             }
+            doorClosed = true;
+            doorSound.PlaySound("event:/Door");
         }
 
         if(safeArea.totalSheep == 0)

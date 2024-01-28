@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class AudioLevel2 : MonoBehaviour
 {
-    // private FMOD.Studio.EventInstance soundtrackInstance;
+    private FMOD.Studio.EventInstance soundtrackInstance;
     private FMOD.Studio.EventInstance windInstance;
     // Start is called before the first frame update
     void Start()
     {
-        // soundtrackInstance = FMODUnity.RuntimeManager.CreateInstance("event:/SoundtrackNoWolf");
+        soundtrackInstance = FMODUnity.RuntimeManager.CreateInstance("event:/SoundtrackWolf");
         windInstance = FMODUnity.RuntimeManager.CreateInstance("event:/WindAmbience");
         
-        // soundtrackInstance.start();
+        soundtrackInstance.start();
         windInstance.start();
     }
 

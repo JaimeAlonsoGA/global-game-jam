@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{68e366d5-8ba7-4798-b2bf-1f51aaa5bc30}">
 		<property name="assetPath">
-			<value>Spring Jump.wav</value>
+			<value>SFX/Spring Jump.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

@@ -6,7 +6,6 @@ public class SafeArea : MonoBehaviour
 {
     public int totalSheep = 0;
     public int numberSheepInside = 0;
-
     public AudioManager sheepSafeSound;
 
     // Start is called before the first frame update

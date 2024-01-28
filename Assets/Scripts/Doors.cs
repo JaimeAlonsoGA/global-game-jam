@@ -53,7 +53,6 @@ public class Doors : MonoBehaviour
             if((float)safeArea.numberSheepInside / (float)safeArea.totalSheep == 1f)
                 numberStars++;
 
-            print(numberStars);
             StartCoroutine(levelPassedScreen.GetComponent<NextLevel>().StarCounting(numberStars, SceneManager.GetActiveScene().buildIndex));
         }
     }

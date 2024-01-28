@@ -1586,7 +1586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7700778804377273559, guid: 91b464cc8f8cb0f47bf783c62a90cf52, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.4619788
       objectReference: {fileID: 0}
     - target: {fileID: 7700778804377273559, guid: 91b464cc8f8cb0f47bf783c62a90cf52, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1624,6 +1624,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1374229480, guid: 4f95281bb13854749b1cdac50154a458, type: 3}
+    - target: {fileID: 8042619568602872678, guid: 91b464cc8f8cb0f47bf783c62a90cf52, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8585558511410048003, guid: 91b464cc8f8cb0f47bf783c62a90cf52, type: 3}
       propertyPath: m_Name
       value: Puerta inf
@@ -4929,9 +4933,9 @@ EdgeCollider2D:
   - {x: 4.7021847, y: -1.8140601}
   - {x: 4.1988173, y: -2.2642713}
   - {x: 0.015320778, y: -2.2579904}
-  - {x: -0.3943634, y: -1.7553545}
+  - {x: -0.5784378, y: -1.5235571}
   - {x: -0.3814689, y: -0.65165967}
-  - {x: 0.023724675, y: -0.62087923}
+  - {x: -0.11262679, y: -0.6686022}
   - {x: 0.08583444, y: -1.199951}
   - {x: 0.6214309, y: -1.5750505}
   - {x: 4.0000315, y: -1.5996242}
@@ -4939,8 +4943,8 @@ EdgeCollider2D:
   - {x: 4.122419, y: 1.4153001}
   - {x: 3.7496386, y: 1.5819483}
   - {x: 0.37520266, y: 1.6315038}
-  - {x: 0.010565996, y: 1.1580292}
-  - {x: -0.48732412, y: 1.2242538}
+  - {x: -0.13668615, y: 0.81198674}
+  - {x: -0.48732412, y: 0.800904}
   - {x: -0.4949323, y: 1.1791202}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}

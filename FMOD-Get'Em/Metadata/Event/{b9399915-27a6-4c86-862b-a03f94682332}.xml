@@ -62,7 +62,14 @@
 			<destination>{9ab6a78b-7cb7-4c00-9266-1199e1dc9bf5}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{73505dfc-2235-4093-ac81-7e12ea598083}" />
+	<object class="EventAutomatableProperties" id="{73505dfc-2235-4093-ac81-7e12ea598083}">
+		<property name="maxVoices">
+			<value>1</value>
+		</property>
+		<property name="triggerCooldown">
+			<value>2000</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{b0dba934-550f-4aa6-a94c-eb63808180e3}" />
 	<object class="Timeline" id="{102724b3-63ed-467c-bf5c-c2c2c81cdbcd}">
 		<property name="isProxyEnabled">
@@ -76,7 +83,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{cf976ffb-aad0-4eb2-8b2f-aedde1b78312}">
 		<property name="volume">
-			<value>8.5</value>
+			<value>10</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{64d946f4-967e-4439-b743-b8e733b9a545}</destination>
@@ -101,6 +108,7 @@
 	<object class="MixerBusPanner" id="{4dbb8f89-c7b2-4e98-80df-7619079310a8}" />
 	<object class="MixerBusEffectChain" id="{64d946f4-967e-4439-b743-b8e733b9a545}">
 		<relationship name="effects">
+			<destination>{0dd3648f-2fdf-4c2a-9c57-3e64c385e719}</destination>
 			<destination>{f6cc8558-54b8-4dfb-867b-60b8cdda77b0}</destination>
 		</relationship>
 	</object>
@@ -111,5 +119,10 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{37866982-ad3e-49db-8768-d937bff58bdd}" />
+	<object class="GainEffect" id="{0dd3648f-2fdf-4c2a-9c57-3e64c385e719}">
+		<property name="gain">
+			<value>2.5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{f6cc8558-54b8-4dfb-867b-60b8cdda77b0}" />
 </objects>

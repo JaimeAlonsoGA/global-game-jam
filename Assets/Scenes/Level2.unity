@@ -212,7 +212,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5355660130175998843, guid: 6858adeed0096fd4a90201bf761b19d1, type: 3}
   m_PrefabInstance: {fileID: 12156372}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 12156373}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d010f51ecd32f4c489682bbbbb5f2ae2, type: 3}
@@ -273,8 +273,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3429665470961361753, guid: 6858adeed0096fd4a90201bf761b19d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 12156374}
   m_SourcePrefab: {fileID: 100100000, guid: 6858adeed0096fd4a90201bf761b19d1, type: 3}
+--- !u!1 &12156373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3429665470961361753, guid: 6858adeed0096fd4a90201bf761b19d1, type: 3}
+  m_PrefabInstance: {fileID: 12156372}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &12156374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12156373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e1a291d63a6454987e433dd83905c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &15208176 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7537970749156733471, guid: 893131148bf4c764794f0cb8c1e44d59, type: 3}
@@ -1092,6 +1112,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6735671191216662225, guid: 2a97c28da3fb3dd4a96bad785729465c, type: 3}
+      propertyPath: sheepFallSound
+      value: 
+      objectReference: {fileID: 8318745}
     - target: {fileID: 8657602545268711791, guid: 2a97c28da3fb3dd4a96bad785729465c, type: 3}
       propertyPath: m_Points.Array.data[0].x
       value: -9.035753

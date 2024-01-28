@@ -9,7 +9,10 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 40;
     public GameObject wolf;
     public AudioManager wolfSound;
-    bool isWolfAlive = false;
+    private void Instantiate(GameObject wolf, Vector3 spawn)
+    {
+        throw new NotImplementedException();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +25,8 @@ public class Timer : MonoBehaviour
     {
         if (timeRemaining > 0)
             timeRemaining -= Time.deltaTime;
-        else if (!isWolfAlive)
-        {
-            isWolfAlive = true;
-            wolf.SetActive(true);
+        else {
+            Instantiate(wolf, new Vector3(0, 0, 0));
             wolfSound.PlaySound("event:/SpawnWolf");
         }
     }

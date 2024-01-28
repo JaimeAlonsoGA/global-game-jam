@@ -8,17 +8,12 @@ public class AudioManager : MonoBehaviour
     public FMOD.Studio.EventInstance shepherdInstance;
     private FMOD.Studio.EventInstance forestAmbience;
 
-
-    //RIVER ON: NIVEL 3
-    // private FMOD.Studio.EventInstance riverInstance;
-
     void Start()
     {
+        forestAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/ForestAmbience");
         sheepInstace = FMODUnity.RuntimeManager.CreateInstance("event:/Sheep");
         shepherdInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Shepherd");
-        // riverInstance = FMODUnity.RuntimeManager.CreateInstance("event:/River");
-        forestAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/SoundtrackNoWolf");
-
+        
         forestAmbience.start();
         sheepInstace.start();
         shepherdInstance.start();

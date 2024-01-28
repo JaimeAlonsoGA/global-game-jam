@@ -35,7 +35,7 @@ public class Doors : MonoBehaviour
 
     void StartEnd()
     {
-        if(safeArea.numberSheepInside / safeArea.totalSheep < 0.5f)
+        if((float)safeArea.numberSheepInside / (float)safeArea.totalSheep < 0.5f)
         {
             levelNotPassedScreen.SetActive(true);
         }
@@ -43,10 +43,12 @@ public class Doors : MonoBehaviour
         {
             levelPassedScreen.SetActive(true);
             int numberStars = 1;
-            if(safeArea.numberSheepInside / safeArea.totalSheep >= 0.75f)
+            if((float)safeArea.numberSheepInside / (float)safeArea.totalSheep >= 0.75f)
                 numberStars++;
-            if(safeArea.numberSheepInside / safeArea.totalSheep == 1f)
+            if((float)safeArea.numberSheepInside / (float)safeArea.totalSheep == 1f)
                 numberStars++;
+
+            print(numberStars);
             StartCoroutine(levelPassedScreen.GetComponent<NextLevel>().StarCounting(numberStars, SceneManager.GetActiveScene().buildIndex));
         }
         doorClosed = true;

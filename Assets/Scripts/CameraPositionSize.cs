@@ -7,6 +7,11 @@ using UnityEngine.UIElements;
 
 public class CameraPositionSize : MonoBehaviour
 {
+    float levelMinX = -1.85f;
+    float levelMaxX = 1.85f;
+    float levelMinY = -1f;
+    float levelMaxY = 1f;
+
     public Transform Shepherd1;
     public Transform Shepherd2;
     //private Vector3 currentScreenSpace;
@@ -26,11 +31,8 @@ public class CameraPositionSize : MonoBehaviour
         PositionY = new Vector3(Shepherd2.position.x, Shepherd2.position.y, -1);
 
         transform.position = Vector3.Lerp(PositionX, PositionY, 0.5f);
-        float x = Mathf.Clamp(transform.position.x, -39, 12.8f);
-        float y = Mathf.Clamp(transform.position.y, -26f, 36);
+        float x = Mathf.Clamp(transform.position.x, levelMinX, levelMaxX);
+        float y = Mathf.Clamp(transform.position.y, levelMinY, levelMaxY);
         transform.position = new Vector3 (x, y);
-        
-        //currentScreenSpace = new Vector3(Shepherd1.position.x, Shepherd1.position.y, 0);
-
     }
 }

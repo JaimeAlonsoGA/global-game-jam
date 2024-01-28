@@ -29,7 +29,6 @@ public class Doors : MonoBehaviour
             if(safeArea.numberSheepInside / safeArea.totalSheep < 0.5f)
             {
                 levelNotPassedScreen.SetActive(true);
-
             }
             else
             {

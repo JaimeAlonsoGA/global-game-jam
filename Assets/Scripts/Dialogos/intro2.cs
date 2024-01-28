@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
-public class TextBubble : MonoBehaviour
+public class intro2 : MonoBehaviour
 {
-    float timeNextDialog;
-
     public Image[] imagesDialog;
     public TextMeshProUGUI[] textsDialog;
 
@@ -15,16 +13,12 @@ public class TextBubble : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeNextDialog = Random.Range(15f, 30f);
-
         StartCoroutine(PlayIntro());
     }
 
     IEnumerator PlayIntro()
     {
-        // enable 1
-
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2);
         imagesDialog[0].enabled = true;
         textsDialog[0].enabled = true;
 
@@ -32,7 +26,7 @@ public class TextBubble : MonoBehaviour
         imagesDialog[0].enabled = false;
         textsDialog[0].enabled = false;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
         imagesDialog[1].enabled = true;
         textsDialog[1].enabled = true;
 
@@ -40,15 +34,15 @@ public class TextBubble : MonoBehaviour
         imagesDialog[1].enabled = false;
         textsDialog[1].enabled = false;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
         imagesDialog[2].enabled = true;
         textsDialog[2].enabled = true;
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         imagesDialog[2].enabled = false;
         textsDialog[2].enabled = false;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);
         imagesDialog[3].enabled = true;
         textsDialog[3].enabled = true;
 
@@ -56,19 +50,26 @@ public class TextBubble : MonoBehaviour
         imagesDialog[3].enabled = false;
         textsDialog[3].enabled = false;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);
         imagesDialog[4].enabled = true;
         textsDialog[4].enabled = true;
 
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(1.7f);
         imagesDialog[4].enabled = false;
         textsDialog[4].enabled = false;
+
+        yield return new WaitForSeconds(0.3f);
+        imagesDialog[5].enabled = true;
+        textsDialog[5].enabled = true;
+
+        yield return new WaitForSeconds(2f);
+        imagesDialog[5].enabled = false;
+        textsDialog[5].enabled = false;
     }
 
-
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-
+        
     }
 }

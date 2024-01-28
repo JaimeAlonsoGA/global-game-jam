@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
+using Unity.VisualScripting;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using FMODUnity;
+using FMOD.Studio;
+using FMOD;
 
 public class NextLevel : MonoBehaviour
 {
     public UnityEngine.UI.Image[] stars;
     public Sprite[] coloredStars;
+    [field: SerializeField] public EventReference[] StarSoundArray { get; private set; }
+    AudioManager starSound;
 
     public void SiguienteNivel()
     {
@@ -43,6 +49,18 @@ public class NextLevel : MonoBehaviour
         for (int i = 0; i < nStars; ++i)
         {
             stars[i].sprite = coloredStars[i];
+            if (i == 1)
+            {
+                starSound.PlaySound("event:/Win1Star");
+            }
+            if (i == 2)
+            {
+                starSound.PlaySound("event:/Win2Stars");
+            }
+            if (i == 3)
+            {
+                starSound.PlaySound("event:/Win3Stars");
+            }
             yield return new WaitForSeconds(1f);
         }
     }

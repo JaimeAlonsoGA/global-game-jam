@@ -3816,6 +3816,74 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: starSound
+      value: 
+      objectReference: {fileID: 1130280554}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[0].Path
+      value: event:/Win1Star
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[1].Path
+      value: event:/Win2Stars
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[2].Path
+      value: event:/Win3Stars
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[0].Guid.Data1
+      value: 1536768450
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[0].Guid.Data2
+      value: 1330559235
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[0].Guid.Data3
+      value: -1358808914
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[0].Guid.Data4
+      value: -1203386673
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[1].Guid.Data1
+      value: -568425023
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[1].Guid.Data2
+      value: 1271929670
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[1].Guid.Data3
+      value: -1950240371
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[1].Guid.Data4
+      value: -564182584
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[2].Guid.Data1
+      value: 97012666
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[2].Guid.Data2
+      value: 1179383173
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[2].Guid.Data3
+      value: -1329875278
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: <StarSound>k__BackingField.Array.data[2].Guid.Data4
+      value: -1335225970
+      objectReference: {fileID: 0}
     - target: {fileID: 4999128358847248475, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
       propertyPath: m_Name
       value: Nivel Superado

@@ -9,15 +9,17 @@ public class SheepMovement : MonoBehaviour
     float currentTimeToNextAction;
     Vector3 nextPosition;
     Vector3 scapePosition;
-    float speed = 0.05f;
+    public float speed = 0.025f;
     Animator animator;
     SpriteRenderer spriteRenderer;
+    // private FMOD.Studio.EventInstance sheepInstace;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        // sheepInstace = FMODUnity.RuntimeManager.CreateInstance("event:/Sheep");
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class SheepMovement : MonoBehaviour
     {   
         spriteRenderer.sortingOrder = 100 - Mathf.RoundToInt(transform.position.y);
         currentTimeToNextAction += Time.deltaTime;
-        if(currentTimeToNextAction >= timeToNextAction)
+        if (currentTimeToNextAction >= timeToNextAction)
         {
             timeToNextAction = Random.Range(5f, 10f);
             currentTimeToNextAction = 0f;
@@ -33,38 +35,40 @@ public class SheepMovement : MonoBehaviour
         }
 
         scapePosition = Vector3.zero;
-        if(Vector3.Distance(shepherds[0].transform.position, transform.position) < 3f)
+        if (Vector3.Distance(shepherds[0].transform.position, transform.position) < 2f && 
+            Vector3.Distance(shepherds[0].transform.position, transform.position) < Vector3.Distance(shepherds[1].transform.position, transform.position))
         {
             scapePosition += transform.position + Vector3.Normalize(transform.position - shepherds[0].transform.position);
         }
-        if(Vector3.Distance(shepherds[1].transform.position, transform.position) < 3f)
+        if (Vector3.Distance(shepherds[1].transform.position, transform.position) < 2f &&
+            Vector3.Distance(shepherds[1].transform.position, transform.position) < Vector3.Distance(shepherds[0].transform.position, transform.position))
         {
             scapePosition += transform.position + Vector3.Normalize(transform.position - shepherds[1].transform.position);
         }
-        if(scapePosition != Vector3.zero)
+        if (scapePosition != Vector3.zero)
             nextPosition = scapePosition;
 
-        if(transform.position == nextPosition)
+        if (transform.position == nextPosition)
             animator.Play("Idle");
         else
         {
             Vector3 direction = Vector3.Normalize(nextPosition - transform.position);
-            
-            if(direction.x > 0.5f)
+
+            if (direction.x > 0.5f)
             {
                 animator.Play("WalkSide");
                 spriteRenderer.flipX = false;
             }
-            else if(direction.x < -0.5f)
+            else if (direction.x < -0.5f)
             {
                 animator.Play("WalkSide");
                 spriteRenderer.flipX = true;
             }
-            else if(direction.y > 0.5f)
+            else if (direction.y > 0.5f)
             {
                 animator.Play("WalkUp");
             }
-            else if(direction.y < -0.5f)
+            else if (direction.y < -0.5f)
             {
                 animator.Play("WalkDown");
             }
@@ -75,9 +79,10 @@ public class SheepMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.CompareTag("Sheep"))
+        if (col.gameObject.CompareTag("Sheep"))
         {
             nextPosition = transform.position;
+            animator.Play("Idle");
         }
     }
 }

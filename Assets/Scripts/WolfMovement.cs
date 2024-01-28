@@ -9,6 +9,8 @@ public class WolfMovement : MonoBehaviour
     private Transform target;
     Animator animator;
     SpriteRenderer spriteRenderer;
+    public AudioManager wolfSound;
+    bool isAttacking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,7 @@ public class WolfMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(animator.GetCurrentAnimatorClipInfo(0).Length > 0 && animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == "Attack")
+        if(isAttacking)
             return;
 
         SearchSheep();
@@ -44,7 +46,7 @@ public class WolfMovement : MonoBehaviour
         Transform closest;
         float distance;
 
-        if(sheep.Length > 0)
+        if (sheep.Length > 0)
             closest = sheep[0].transform;
         else
             return transform;
@@ -64,38 +66,41 @@ public class WolfMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Sheep")
+        if (collision.gameObject.CompareTag("Sheep"))
         {
+            isAttacking = true;
             Destroy(collision.gameObject);
             target = null;
             animator.Play("Attack");
             StartCoroutine(KillSheep());
+            wolfSound.PlaySound("event:/WolfKillsSheep");
         }
     }
 
     IEnumerator KillSheep()
     {
         yield return new WaitForSeconds(2f);
+        isAttacking = false;
         SearchSheep();
     }
 
     void PlayMoveAnimation(Vector3 direction)
     {
-        if(direction.x > 0.5f)
+        if (direction.x > 0.5f)
         {
             animator.Play("WalkSide");
             spriteRenderer.flipX = false;
         }
-        else if(direction.x < -0.5f)
+        else if (direction.x < -0.5f)
         {
             animator.Play("WalkSide");
             spriteRenderer.flipX = true;
         }
-        else if(direction.y > 0.5f)
+        else if (direction.y > 0.5f)
         {
             animator.Play("WalkUp");
         }
-        else if(direction.y < -0.5f)
+        else if (direction.y < -0.5f)
         {
             animator.Play("WalkDown");
         }

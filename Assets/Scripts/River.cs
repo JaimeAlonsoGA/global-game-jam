@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class River : MonoBehaviour
 {
+    public AudioManager sheepWaterSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +16,13 @@ public class River : MonoBehaviour
     {
         
     }
-
-    void OnTriggerEnter2D(Collider2D collider)
+    
+    void OnCollisionEnter2D(Collision2D col)
     {
-        if(collider.gameObject.CompareTag("Sheep"))
+        if(col.gameObject.CompareTag("Sheep"))
         {
-            Destroy(collider.gameObject);
+            Destroy(col.gameObject);
+            sheepWaterSound.PlaySound("event:/SheepWaterSplash");
         }
     }
 }

@@ -34,13 +34,13 @@ public class NextLevel : MonoBehaviour
         switch (level)
         {
             case 1:
-                Stars.starsLevel1 = nStars;
+                Stars.starsLevel1 = Stars.starsLevel1 < nStars ? nStars : Stars.starsLevel1;
                 break;
             case 2:
-                Stars.starsLevel2 = nStars;
+                Stars.starsLevel2 = Stars.starsLevel2 < nStars ? nStars : Stars.starsLevel2;
                 break;
             case 3:
-                Stars.starsLevel3 = nStars;
+                Stars.starsLevel3 = Stars.starsLevel3 < nStars ? nStars : Stars.starsLevel3;
                 break;
         }
         for (int i = 0; i < nStars; ++i)

@@ -1332,7 +1332,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1102919281}
   - component: {fileID: 1102919280}
-  - component: {fileID: 1102919279}
+  - component: {fileID: 1102919283}
+  - component: {fileID: 1102919282}
   m_Layer: 0
   m_Name: Bridge
   m_TagString: Untagged
@@ -1340,27 +1341,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1102919279
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102919278}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1102919280
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1422,12 +1402,98 @@ Transform:
   m_GameObject: {fileID: 1102919278}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.4520819, w: 0.8919765}
-  m_LocalPosition: {x: 0.39999962, y: -3.6, z: 0}
+  m_LocalPosition: {x: 0.71, y: -3.6, z: 0}
   m_LocalScale: {x: 4.6225004, y: 3.27, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 53.755}
+--- !u!68 &1102919282
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102919278}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.43180466, y: 0.692359}
+  - {x: -0.43404645, y: 0.50365347}
+  - {x: 0.3754622, y: 0.50346434}
+  - {x: 0.37743747, y: 0.63426775}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &1102919283
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102919278}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.42767462, y: -0.66902685}
+  - {x: -0.4286709, y: -0.5039325}
+  - {x: 0.38220745, y: -0.50076586}
+  - {x: 0.38163123, y: -0.657387}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1130280553
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,8 +3138,8 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.50065833, y: 0.59923935}
-  - {x: -0.017824784, y: 0.46140578}
-  - {x: -0.016244952, y: -0.5072193}
+  - {x: -0.016117675, y: 0.5024352}
+  - {x: -0.01646265, y: -0.5035159}
   - {x: -0.50103664, y: -0.48906067}
   - {x: -0.49816406, y: 0.6156298}
   m_AdjacentStartPoint: {x: 0, y: 0}
@@ -3115,12 +3181,12 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.013067484, y: -0.5860312}
+  - {x: 0.01878275, y: -0.5000224}
   - {x: 0.2679618, y: -0.53988814}
   - {x: 0.45556188, y: -0.50592667}
   - {x: 0.49402654, y: 0.5691977}
-  - {x: 0.011446878, y: 0.44546342}
-  - {x: 0.011191558, y: -0.50161946}
+  - {x: 0.018952344, y: 0.50055087}
+  - {x: 0.018783396, y: -0.500014}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0

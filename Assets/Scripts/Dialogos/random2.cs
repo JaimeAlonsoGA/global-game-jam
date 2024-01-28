@@ -24,7 +24,7 @@ public class random2 : MonoBehaviour
             imagesDialog[currentDialog].enabled = true;
             textsDialog[currentDialog].enabled = true;
 
-            yield return new WaitForSeconds(1.2f);
+            yield return new WaitForSeconds(1.8f);
             imagesDialog[currentDialog].enabled = false;
             textsDialog[currentDialog].enabled = false;
         }

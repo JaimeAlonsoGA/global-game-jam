@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using Unity.VisualScripting;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -47,7 +45,7 @@ public class NextLevel : MonoBehaviour
         }
         for (int i = 0; i < nStars; ++i)
         {
-            stars[i].sprite = coloredStars[i];       
+            stars[i].sprite = coloredStars[i];
             if (i == 0)
             {
                 starSound.PlaySound("event:/Win1Star");

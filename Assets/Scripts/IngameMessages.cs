@@ -15,10 +15,8 @@ public class IngameMessages : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //GetComponent<SafeArea>().totalSheep;
         //if (level1 == true)
-        //GameObject.FindWithTag("totalSheep");
-        //fence.GetComponent<int>();
-        //GetComponent<SafeArea>();
+        //if(GetComponent<SafeArea>().numberSheepInside >=  GetComponent<SafeArea>().totalSheep / 2 )
+        //.Show();
     }
 }

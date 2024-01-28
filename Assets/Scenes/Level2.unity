@@ -2762,6 +2762,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0bc8c1c31568f24885127b2cb1ee7ac, type: 3}
+--- !u!1 &1581510699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7395897105117086890, guid: a0bc8c1c31568f24885127b2cb1ee7ac, type: 3}
+  m_PrefabInstance: {fileID: 1581510698}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1595595781
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,8 +2796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40fcb02ff7200b49b5f98f6f6cf1c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelPassedScreen: {fileID: 0}
-  levelNotPassedScreen: {fileID: 0}
+  levelPassedScreen: {fileID: 1692401483}
+  levelNotPassedScreen: {fileID: 1581510699}
   doorSound: {fileID: 8318745}
   safeArea: {fileID: 1732654080}
   doorClosed: 0
@@ -3246,6 +3251,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+--- !u!1 &1692401483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4999128358847248475, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+  m_PrefabInstance: {fileID: 1692401482}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1703361369
 PrefabInstance:
   m_ObjectHideFlags: 0

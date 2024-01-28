@@ -12,9 +12,17 @@ public class MenuUno : MonoBehaviour
     public Image[] stars3;
     public Sprite[] coloredStars;
 
-    public void Jugar()
+    public void Jugar1()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    public void Jugar2()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }
+    public void Jugar3()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
     }
 
     void Start()

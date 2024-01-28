@@ -60,7 +60,7 @@ public class NextLevel : MonoBehaviour
             }
             yield return new WaitForSeconds(1f);
         }
-    }
+    }   
 }
 
 public class Stars

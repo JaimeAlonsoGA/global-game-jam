@@ -976,7 +976,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -3035,7 +3035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca6e0b7e7cf486448a2f011e38ea98dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sheepWaterSound: {fileID: 1130280554}
+  sheepWaterSound: {fileID: 0}
 --- !u!68 &1899446823
 EdgeCollider2D:
   m_ObjectHideFlags: 0

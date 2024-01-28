@@ -42,7 +42,7 @@ public class Doors : MonoBehaviour
             }
             doorClosed = true;
             doorSound.PlaySound("event:/Door");
-            
+
             audioInstance.sheepInstace.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             audioInstance.shepherdInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }

@@ -509,6 +509,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: starSound
+      value: 
+      objectReference: {fileID: 1626903994}
     - target: {fileID: 4999128358847248475, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
       propertyPath: m_Name
       value: Nivel Superado
@@ -518,6 +522,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+--- !u!1 &333720231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3429665470961361753, guid: 6858adeed0096fd4a90201bf761b19d1, type: 3}
+  m_PrefabInstance: {fileID: 1363201099}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &379188755
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,8 +621,8 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -621,14 +630,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -709,6 +710,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shepherd1: {fileID: 929971278}
   Shepherd2: {fileID: 929971277}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &530599873 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6961534420388143288, guid: 0f7d6a0a7dc8a6847a6e92ad83aa94a8, type: 3}
@@ -2585,7 +2599,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3429665470961361753, guid: 6858adeed0096fd4a90201bf761b19d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1626903996}
   m_SourcePrefab: {fileID: 100100000, guid: 6858adeed0096fd4a90201bf761b19d1, type: 3}
 --- !u!4 &1440761130 stripped
 Transform:
@@ -2686,10 +2703,22 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5355660130175998843, guid: 6858adeed0096fd4a90201bf761b19d1, type: 3}
   m_PrefabInstance: {fileID: 1363201099}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 333720231}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d010f51ecd32f4c489682bbbbb5f2ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1626903996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333720231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa339cb355202234ab623c48c99b89f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1650695261 stripped
@@ -2785,6 +2814,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6823963418433870246, guid: a0bc8c1c31568f24885127b2cb1ee7ac, type: 3}
+      propertyPath: starSound
+      value: 
+      objectReference: {fileID: 1626903994}
     - target: {fileID: 7395897105117086890, guid: a0bc8c1c31568f24885127b2cb1ee7ac, type: 3}
       propertyPath: m_Name
       value: Nivel no Superado
@@ -2827,6 +2860,7 @@ MonoBehaviour:
   levelNotPassedScreen: {fileID: 124729438}
   doorSound: {fileID: 1626903994}
   safeArea: {fileID: 1262755685}
+  doorClosed: 0
 --- !u!4 &1830223114
 Transform:
   m_ObjectHideFlags: 0

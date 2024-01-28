@@ -19,12 +19,12 @@ public class random1 : MonoBehaviour
         yield return new WaitForSeconds(15f);
         while(true)
         {
-            int currentDialog = Random.Range(0, 2);
+            int currentDialog = Random.Range(0, 6);
             imagesDialog[currentDialog].enabled = true;
             textsDialog[currentDialog].enabled = true;
-            yield return new WaitForSeconds(Random.Range(15f, 25f));
+            yield return new WaitForSeconds(Random.Range(10f, 15f));
 
-            yield return new WaitForSeconds(1.2f);
+            /*yield return new WaitForSeconds(1.2f);
             imagesDialog[0].enabled = false;
             textsDialog[0].enabled = false;
 
@@ -34,7 +34,7 @@ public class random1 : MonoBehaviour
 
             yield return new WaitForSeconds(1.2f);
             imagesDialog[2].enabled = false;
-            textsDialog[2].enabled = false;
+            textsDialog[2].enabled = false;*/
         }
     }
 

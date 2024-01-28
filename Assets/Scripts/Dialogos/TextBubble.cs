@@ -51,14 +51,6 @@ public class TextBubble : MonoBehaviour
         yield return new WaitForSeconds(1.8f);
         imagesDialog[3].enabled = false;
         textsDialog[3].enabled = false;
-
-        yield return new WaitForSeconds(0.8f);
-        imagesDialog[4].enabled = true;
-        textsDialog[4].enabled = true;
-
-        yield return new WaitForSeconds(1.2f);
-        imagesDialog[4].enabled = true;
-        textsDialog[4].enabled = true;
     }
 
     // Update is called once per frame

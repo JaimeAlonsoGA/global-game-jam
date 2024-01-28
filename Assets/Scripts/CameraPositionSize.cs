@@ -7,9 +7,9 @@ using UnityEngine.UIElements;
 
 public class CameraPositionSize : MonoBehaviour
 {
-    float levelMinX = -1.85f;
-    float levelMaxX = 1.85f;
-    float levelMinY = -1f;
+    float levelMinX = -1.75f;
+    float levelMaxX = 1.75f;
+    float levelMinY = -0.9f;
     float levelMaxY = 1f;
 
     public Transform Shepherd1;

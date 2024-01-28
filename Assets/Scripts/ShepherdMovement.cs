@@ -80,13 +80,13 @@ public class ShepherdMovement : MonoBehaviour
             {
                 spriteRenderer2.sortingOrder = 1000 - Mathf.RoundToInt(transform.position.y * 100);
                 if ((Mathf.Abs(shepherd1.transform.position.y - shepherd2.transform.position.y) < 7f || shepherd2.transform.position.y < shepherd1.transform.position.y) && (yTwo > 0 || Input.GetKey(KeyCode.UpArrow)))
-                    gameObject.transform.position += new Vector3(0, 4f, 0) * Time.deltaTime;
+                    gameObject.transform.position += new Vector3(0, 3f, 0) * Time.deltaTime;
                 if ((Mathf.Abs(shepherd1.transform.position.x - shepherd2.transform.position.x) < 13f || shepherd2.transform.position.x < shepherd1.transform.position.x) && (xTwo > 0 || Input.GetKey(KeyCode.RightArrow)))
-                    gameObject.transform.position += new Vector3(4f, 0, 0) * Time.deltaTime;
+                    gameObject.transform.position += new Vector3(3f, 0, 0) * Time.deltaTime;
                 if ((Mathf.Abs(shepherd1.transform.position.x - shepherd2.transform.position.x) < 13f || shepherd2.transform.position.x > shepherd1.transform.position.x) && (xTwo < 0 || Input.GetKey(KeyCode.LeftArrow)))
-                    gameObject.transform.position += new Vector3(-4f, 0, 0) * Time.deltaTime;
+                    gameObject.transform.position += new Vector3(-3f, 0, 0) * Time.deltaTime;
                 if ((Mathf.Abs(shepherd1.transform.position.y - shepherd2.transform.position.y) < 7f || shepherd2.transform.position.y > shepherd1.transform.position.y) && (yTwo < 0 || Input.GetKey(KeyCode.DownArrow)))
-                    gameObject.transform.position += new Vector3(0, -4f, 0) * Time.deltaTime;
+                    gameObject.transform.position += new Vector3(0, -3f, 0) * Time.deltaTime;
 
                 Vector3 direction = Vector3.Normalize(gameObject.transform.position - firstPosition);
                 if (direction.x > 0.5f)

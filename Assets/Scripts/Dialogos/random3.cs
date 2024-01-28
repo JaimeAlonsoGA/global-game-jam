@@ -22,7 +22,7 @@ public class random3 : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(Random.Range(10f, 15f));
-            int currentDialog = Random.Range(0, 6);
+            int currentDialog = Random.Range(0, 4);
             imagesDialog[currentDialog].enabled = true;
             textsDialog[currentDialog].enabled = true;
 

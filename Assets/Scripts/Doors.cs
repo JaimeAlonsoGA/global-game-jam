@@ -23,7 +23,7 @@ public class Doors : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKey(KeyCode.Space) || Input.GetButtonDown("Jump")) && doorClosed == false)
+        if ((Input.GetKey(KeyCode.Space) || Input.GetButtonDown("Action")) && doorClosed == false)
         {
             GetComponentsInChildren<Animator>()[0].Play("Door");
             GetComponentsInChildren<Animator>()[1].Play("Door");

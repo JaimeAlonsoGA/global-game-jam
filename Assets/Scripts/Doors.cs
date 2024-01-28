@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,9 +26,22 @@ public class Doors : MonoBehaviour
             GetComponentsInChildren<Animator>()[0].Play("Door");
             GetComponentsInChildren<Animator>()[1].Play("Door");
             if(safeArea.numberSheepInside / safeArea.totalSheep < 0.5f)
+            {
                 levelNotPassedScreen.SetActive(true);
-            // else
-            //     levelPassedScreen safeArea.numberSheepInside / safeArea.totalSheep;
+            }
+            else
+            {
+                levelPassedScreen.SetActive(true);
+                int numberStars = 1;
+                if(safeArea.numberSheepInside / safeArea.totalSheep >= 0.75f)
+                    numberStars++;
+                if(safeArea.numberSheepInside / safeArea.totalSheep == 1f)
+                    numberStars++;
+                StartCoroutine(levelPassedScreen.GetComponent<NextLevel>().StarCounting(numberStars, SceneManager.GetActiveScene().buildIndex));
+            }
         }
+
+        if(safeArea.totalSheep == 0)
+            levelNotPassedScreen.SetActive(true);
     }
 }

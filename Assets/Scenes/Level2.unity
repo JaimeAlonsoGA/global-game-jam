@@ -3233,6 +3233,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4051597414659981499, guid: 33d5e81f039306c44873088eb4afbafc, type: 3}
+      propertyPath: wolfSound
+      value: 
+      objectReference: {fileID: 8318745}
     - target: {fileID: 8615326086637399843, guid: 33d5e81f039306c44873088eb4afbafc, type: 3}
       propertyPath: m_Name
       value: Wolf

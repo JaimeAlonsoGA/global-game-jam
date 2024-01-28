@@ -209,7 +209,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1831976141}
         m_TargetAssemblyTypeName: MenuUno, Assembly-CSharp
-        m_MethodName: Jugar
+        m_MethodName: Jugar1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

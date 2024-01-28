@@ -5,6 +5,7 @@ using UnityEngine;
 public class SafeArea : MonoBehaviour
 {
     public int totalSheep = 0;
+    public int totalSheepRemaining = 0;
     public int numberSheepInside = 0;
     public AudioManager sheepSafeSound;
 
@@ -14,12 +15,13 @@ public class SafeArea : MonoBehaviour
     void Start()
     {
         totalSheep = GameObject.FindGameObjectsWithTag("Sheep").Length;
+        totalSheepRemaining = totalSheep;
     }
 
     // Update is called once per frame
     void Update()
     {
-        totalSheep = GameObject.FindGameObjectsWithTag("Sheep").Length;
+        totalSheepRemaining = GameObject.FindGameObjectsWithTag("Sheep").Length;
         numberSheepInside = sheep.Count;
     }
 

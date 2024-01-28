@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Doors : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class Doors : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space) && doorClosed == false)
+        if ((Input.GetKey(KeyCode.Space) || Input.GetButtonDown("Jump")) && doorClosed == false)
         {
             GetComponentsInChildren<Animator>()[0].Play("Door");
             GetComponentsInChildren<Animator>()[1].Play("Door");
@@ -31,7 +32,7 @@ public class Doors : MonoBehaviour
             doorSound.PlaySound("event:/Door");
         }
 
-        if (safeArea.totalSheep == 0)
+        if (safeArea.totalSheepRemaining == 0)
         {
             levelNotPassedScreen.SetActive(true);
         }

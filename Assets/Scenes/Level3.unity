@@ -1155,15 +1155,15 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.66727734, y: 0.71912646}
+  - {x: 0.65567636, y: 0.9047414}
   - {x: 1.3916632, y: 1.5331982}
   - {x: 4.4597745, y: 1.456449}
   - {x: 4.6692567, y: 1.0974394}
   - {x: 4.6498537, y: -1.2275424}
   - {x: 4.329072, y: -1.5261526}
   - {x: 1.1996, y: -1.5396281}
-  - {x: 0.67425615, y: -0.70038295}
-  - {x: 0.2799524, y: -0.733559}
+  - {x: 0.6974581, y: -0.9208007}
+  - {x: 0.31475508, y: -1.058385}
   - {x: 0.29449308, y: -1.7550128}
   - {x: 0.94616294, y: -2.309289}
   - {x: 4.7091694, y: -2.339402}
@@ -1172,8 +1172,8 @@ EdgeCollider2D:
   - {x: 4.5172634, y: 2.390936}
   - {x: 1.036191, y: 2.3684115}
   - {x: 0.46845114, y: 1.908577}
-  - {x: 0.25904158, y: 0.78322256}
-  - {x: 0.6528559, y: 0.726034}
+  - {x: 0.29384425, y: 0.8644291}
+  - {x: 0.6760578, y: 0.87684613}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -3332,6 +3332,10 @@ PrefabInstance:
     - target: {fileID: 7166798048627160958, guid: a77c7054ddf63aa409aa4769626e838e, type: 3}
       propertyPath: m_Name
       value: SheepCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166798048627160958, guid: a77c7054ddf63aa409aa4769626e838e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8855419767294909961, guid: a77c7054ddf63aa409aa4769626e838e, type: 3}
       propertyPath: m_LocalPosition.x

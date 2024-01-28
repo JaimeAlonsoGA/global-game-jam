@@ -19,22 +19,14 @@ public class random2 : MonoBehaviour
         yield return new WaitForSeconds(15f);
         while(true)
         {
+            yield return new WaitForSeconds(Random.Range(10f, 15f));
             int currentDialog = Random.Range(0, 6);
             imagesDialog[currentDialog].enabled = true;
             textsDialog[currentDialog].enabled = true;
-            yield return new WaitForSeconds(Random.Range(10f, 15f));
 
-            /*yield return new WaitForSeconds(1.2f);
-            imagesDialog[0].enabled = false;
-            textsDialog[0].enabled = false;
-
-            yield return new WaitForSeconds(1.2f);
-            imagesDialog[1].enabled = false;
-            textsDialog[1].enabled = false;
-
-            yield return new WaitForSeconds(1.2f);
-            imagesDialog[2].enabled = false;
-            textsDialog[2].enabled = false;*/
+            yield return new WaitForSeconds(1.8f);
+            imagesDialog[currentDialog].enabled = false;
+            textsDialog[currentDialog].enabled = false;
         }
     }
 

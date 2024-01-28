@@ -9,7 +9,7 @@ public class SheepMovement : MonoBehaviour
     float currentTimeToNextAction;
     Vector3 nextPosition;
     Vector3 scapePosition;
-    float speed = 0.05f;
+    public float speed = 0.025f;
     Animator animator;
     SpriteRenderer spriteRenderer;
     // private FMOD.Studio.EventInstance sheepInstace;

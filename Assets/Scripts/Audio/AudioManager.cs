@@ -4,28 +4,25 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    private FMOD.Studio.EventInstance sheepInstace;
-    private FMOD.Studio.EventInstance shepherdInstance;
-    private FMOD.Studio.EventInstance soundtrackInstance;
+    public FMOD.Studio.EventInstance sheepInstace;
+    public FMOD.Studio.EventInstance shepherdInstance;
+    private FMOD.Studio.EventInstance forestAmbience;
 
 
     //RIVER ON: NIVEL 3
-    private FMOD.Studio.EventInstance riverInstance;
+    // private FMOD.Studio.EventInstance riverInstance;
 
     void Start()
     {
         sheepInstace = FMODUnity.RuntimeManager.CreateInstance("event:/Sheep");
         shepherdInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Shepherd");
-        riverInstance = FMODUnity.RuntimeManager.CreateInstance("event:/River");
-        soundtrackInstance = FMODUnity.RuntimeManager.CreateInstance("event:/SoundtrackNoWolf");
+        // riverInstance = FMODUnity.RuntimeManager.CreateInstance("event:/River");
+        forestAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/SoundtrackNoWolf");
 
-
-        PlaySound("event:/ForestAmbience");
-        soundtrackInstance.start();
+        forestAmbience.start();
         sheepInstace.start();
         shepherdInstance.start();
-        riverInstance.start();
-
+        // riverInstance.start();
     }
     public void PlaySound(string path)
     {
@@ -34,6 +31,6 @@ public class AudioManager : MonoBehaviour
 
     void Update()
     {
-
+    
     }
 }

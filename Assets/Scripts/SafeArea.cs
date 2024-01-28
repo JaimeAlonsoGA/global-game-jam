@@ -8,6 +8,8 @@ public class SafeArea : MonoBehaviour
     public int numberSheepInside = 0;
     public AudioManager sheepSafeSound;
 
+    HashSet<GameObject> sheep = new HashSet<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,18 +20,19 @@ public class SafeArea : MonoBehaviour
     void Update()
     {
         totalSheep = GameObject.FindGameObjectsWithTag("Sheep").Length;
+        numberSheepInside = sheep.Count;
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.CompareTag("Sheep"))
-            numberSheepInside++;
+            sheep.Add(col.gameObject);
         sheepSafeSound.PlaySound("event:/SheepDelivery");
     }
 
     void OnTriggerExit2D(Collider2D col)
     {
         if(col.gameObject.CompareTag("Sheep"))
-            numberSheepInside--;
+            sheep.Remove(col.gameObject);
     }
 }

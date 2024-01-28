@@ -26,28 +26,32 @@ public class Doors : MonoBehaviour
         {
             GetComponentsInChildren<Animator>()[0].Play("Door");
             GetComponentsInChildren<Animator>()[1].Play("Door");
-            if(safeArea.numberSheepInside / safeArea.totalSheep < 0.5f)
-            {
-                levelNotPassedScreen.SetActive(true);
-            }
-            else
-            {
-                levelPassedScreen.SetActive(true);
-                int numberStars = 1;
-                if(safeArea.numberSheepInside / safeArea.totalSheep >= 0.75f)
-                    numberStars++;
-                if(safeArea.numberSheepInside / safeArea.totalSheep == 1f)
-                    numberStars++;
-                StartCoroutine(levelPassedScreen.GetComponent<NextLevel>().StarCounting(numberStars, SceneManager.GetActiveScene().buildIndex));
-            }
-            doorClosed = true;
-            doorSound.PlaySound("event:/Door");
-
-            audioInstance.sheepInstace.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            audioInstance.shepherdInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            Invoke("StartEnd", 1f);
         }
 
         if(safeArea.totalSheep == 0)
             levelNotPassedScreen.SetActive(true);
+    }
+
+    void StartEnd()
+    {
+        if((float)safeArea.numberSheepInside / (float)safeArea.totalSheep < 0.5f)
+        {
+            levelNotPassedScreen.SetActive(true);
+        }
+        else
+        {
+            levelPassedScreen.SetActive(true);
+            int numberStars = 1;
+            if((float)safeArea.numberSheepInside / (float)safeArea.totalSheep >= 0.75f)
+                numberStars++;
+            if((float)safeArea.numberSheepInside / (float)safeArea.totalSheep == 1f)
+                numberStars++;
+
+            print(numberStars);
+            StartCoroutine(levelPassedScreen.GetComponent<NextLevel>().StarCounting(numberStars, SceneManager.GetActiveScene().buildIndex));
+        }
+        doorClosed = true;
+        doorSound.PlaySound("event:/Door");
     }
 }

@@ -47,7 +47,7 @@ public class NextLevel : MonoBehaviour
         }
         for (int i = 0; i < nStars; ++i)
         {
-            stars[i].sprite = coloredStars[i];
+            stars[i].sprite = coloredStars[i];       
             if (i == 0)
             {
                 starSound.PlaySound("event:/Win1Star");
@@ -60,7 +60,7 @@ public class NextLevel : MonoBehaviour
             {
                 starSound.PlaySound("event:/Win3Star");
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.5f);
         }
     }
 }

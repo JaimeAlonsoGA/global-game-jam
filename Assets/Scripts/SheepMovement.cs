@@ -9,7 +9,7 @@ public class SheepMovement : MonoBehaviour
     float currentTimeToNextAction;
     Vector3 nextPosition;
     Vector3 scapePosition;
-    float speed = 0.05f;
+    public float speed = 0.025f;
     Animator animator;
     SpriteRenderer spriteRenderer;
     // private FMOD.Studio.EventInstance sheepInstace;
@@ -35,11 +35,13 @@ public class SheepMovement : MonoBehaviour
         }
 
         scapePosition = Vector3.zero;
-        if (Vector3.Distance(shepherds[0].transform.position, transform.position) < 3f)
+        if (Vector3.Distance(shepherds[0].transform.position, transform.position) < 2f && 
+            Vector3.Distance(shepherds[0].transform.position, transform.position) < Vector3.Distance(shepherds[1].transform.position, transform.position))
         {
             scapePosition += transform.position + Vector3.Normalize(transform.position - shepherds[0].transform.position);
         }
-        if (Vector3.Distance(shepherds[1].transform.position, transform.position) < 3f)
+        if (Vector3.Distance(shepherds[1].transform.position, transform.position) < 2f &&
+            Vector3.Distance(shepherds[1].transform.position, transform.position) < Vector3.Distance(shepherds[0].transform.position, transform.position))
         {
             scapePosition += transform.position + Vector3.Normalize(transform.position - shepherds[1].transform.position);
         }
@@ -80,6 +82,7 @@ public class SheepMovement : MonoBehaviour
         if (col.gameObject.CompareTag("Sheep"))
         {
             nextPosition = transform.position;
+            animator.Play("Idle");
         }
     }
 }

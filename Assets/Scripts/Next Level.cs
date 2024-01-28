@@ -60,7 +60,7 @@ public class NextLevel : MonoBehaviour
             {
                 starSound.PlaySound("event:/Win3Star");
             }
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1f);
         }
     }
 }

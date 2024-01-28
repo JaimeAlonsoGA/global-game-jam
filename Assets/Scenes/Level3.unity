@@ -474,6 +474,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3203587203944333759, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
+      propertyPath: starSound
+      value: 
+      objectReference: {fileID: 993874376}
     - target: {fileID: 4999128358847248475, guid: 58363cd7a9080bc4682ada1f761a04e5, type: 3}
       propertyPath: m_Name
       value: Nivel Superado
@@ -948,6 +952,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6823963418433870246, guid: a0bc8c1c31568f24885127b2cb1ee7ac, type: 3}
+      propertyPath: starSound
+      value: 
+      objectReference: {fileID: 993874376}
     - target: {fileID: 7395897105117086890, guid: a0bc8c1c31568f24885127b2cb1ee7ac, type: 3}
       propertyPath: m_Name
       value: Nivel no Superado
